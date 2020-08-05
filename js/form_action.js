@@ -10,10 +10,16 @@ $('#contactForm').submit(function(e) {
         0: function(data) {
           $('#form-loading').html('');
           $('#noticeArea').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Success, thank you!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+          $('#nameInput').val('');
+          $('#emailInput').val('');
+          $('#commentInput').val('');
         },
         200: function(data) {
             $('#form-loading').html('');
             $('#noticeArea').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Success, thank you!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            $('#nameInput').val('');
+            $('#emailInput').val('');
+            $('#commentInput').val('');
         },
         403: function(data) {
             $('#form-loading').html('');
