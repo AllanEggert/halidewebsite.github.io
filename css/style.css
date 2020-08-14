@@ -1,146 +1,98 @@
-/* Setup main styles */
-html, body {
-  height: 100%;
-  overflow: auto;
-  font-family: Arial, Helvetica, sans-serif;
+/* Core Styles */
+body {
+    background: rgb(11,11,11);
+    scrollbar-color: rgb(50,50,50) rgb(11,11,11);
+    scrollbar-width: thin;
 }
 a {
-  color: #239a9a;
-  font-weight: normal;
-  text-decoration: none;
+color: #239a9a;
+font-weight: normal;
+text-decoration: none;
 }
 a:hover {
-  color: #239a9a;
-  font-weight: bolder;
-  text-decoration: underline;
+color: #239a9a;
+text-decoration: underline!important;
+text-decoration-color:#239a9a;
 }
-.text-kj {
-    font-family: 'Roboto Mono', monospace;
-    color: #f4f9f9;
-}
-.separator > hr {
-    border-top: 1px #f2f4f3 solid!important;
-}
-.line-height-fix {
-    line-height: 50px;
-}
-/* New Styling Code */
+/* Bootstrap Overrides */
 .col {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding: 0px;
 }
-.margin-100 {
-  margin: 0px 0px 200px 0px;
+.navbar {
+    background: rgb(11,11,11);
 }
-.logo-box {
-  margin: 0px 0px 100px 0px;
-  padding: 20px;
-  background-color: rgba(11, 11, 11, 1);
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
-.logo-box:after {
-  background-color: rgba(11, 11, 11, 1);
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  bottom: 0;
-  transform: skewY(-1.5deg);
-  transform-origin: center;
+/* Section Styles */
+.logo-img {
+    display: block;
+    background: url('/img/logo.png');
+    background-size: cover;
+    width: 400px;
+    height: 100px;
+}
+.logo {
+position: relative;
+width: 100%;
 }
 .body-text {
-  
-  color: #f4f9f9;
-  font-size: 17pt;
-  font-family: 'Roboto Mono', monospace;
-  padding: 100px 30px 100px 30px;
+    background: rgb(11,11,11);
+    font-family: 'Roboto Mono', monospace;
+    color:#f4f9f9;
+    width: 100%;
+    padding: 150px 20px 150px 20px;
 }
-.body-text:before,
-.body-text:after {
-    background-color: rgba(11, 11, 11, 1);
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
+/* Parallax Styles */
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+  .parallax-group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .parallax-layer {
     position: absolute;
+    top: 0;
+    left: 0;
     right: 0;
-    z-index: -1;
+    bottom: 0;
+  }
+  .parallax-fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+  .parallax-base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+  .parallax-back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+  .parallax--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+/* Video Styles */
+.video {
+    width: 100%;
 }
-.body-text:before {
-  top: 0;
-  transform: skewY(-1.5deg);
-  transform-origin: center;
+/* Misc Styles */
+.navbar-toggler-icon {
+background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.body-text:after {
-  bottom: 0;
-  transform: skewY(-1.5deg);
-  transform-origin: center;
-}
-.close {
-    color: #080708!important;
-}
-.nav-link {
-  color: #f4f9f9;
-  font-size: 12pt;
-}
-.nav-link:hover{
-  font-weight: normal;
-  color:#6f8695;
-}
-.home-tab {
-  margin-top: 15px;
-}
-.tab-text-body {
-  margin-top: 15px;
-}
-.text-mini {
-  font-size: 8pt;
-}
-.pm-list {
-  font-size: 14pt;
-}
-/* Background Stuff */
-#bg-vid {
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  z-index: -100;
-}
-.vid-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  background-image: url("/img/bg_overlay.png");
-  background-repeat: repeat;
-  z-index: -50;
-}
-/* youtube embed stuff */
-.yt-frame {
-  margin-top: 15px;
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-.yt-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* Contact form styles */
 .cf-element {
-  margin-top: 15px;
+    padding: 10px;
 }
