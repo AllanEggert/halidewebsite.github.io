@@ -25,18 +25,58 @@ a:hover {
     line-height: 50px;
 }
 /* New Styling Code */
+.col {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.margin-100 {
+  margin: 0px 0px 200px 0px;
+}
 .logo-box {
-  margin: 10px;
+  margin: 0px 0px 100px 0px;
   padding: 20px;
-  background-color: rgba(11, 11, 11, 0.95);
+  background-color: rgba(11, 11, 11, 1);
+}
+.logo-box:after {
+  background-color: rgba(11, 11, 11, 1);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: center;
 }
 .body-text {
-  background-color: rgba(11, 11, 11, 0.95);
+  
   color: #f4f9f9;
   font-size: 17pt;
   font-family: 'Roboto Mono', monospace;
-  margin: 10px;
-  padding: 20px;
+  padding: 100px 30px 100px 30px;
+}
+.body-text:before,
+.body-text:after {
+    background-color: rgba(11, 11, 11, 1);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.body-text:before {
+  top: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: center;
+}
+.body-text:after {
+  bottom: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: center;
 }
 .close {
     color: #080708!important;
