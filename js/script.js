@@ -28,16 +28,31 @@ $('#contactForm').submit(function(e) {
       }  
     });
   });
-  $(window).scroll(function() {
-    var hasRun = false;
-    var vid = $("#tagline");
-    var hT = vid.offset().top,
-        hH = vid.outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-        if (wS > (hT+hH-wH) && hasRun == false){
-          vid.get(0).currentTime = 0;
-          vid.trigger('play');
-          hasRun = true;
-        }
+  var windowHeight = $(window).height();
+  var vidOverlay = $("#vidOverlay");
+  var vid = $("#tagline");
+  var hasRun = false;
+  var overlayOpacity = 0;
+$(window).scroll(function() {
+  // Bring in overlay
+  var overlayOffset = vidOverlay.offset().top;
+  overlayOffset = (overlayOffset - (windowHeight / 10));
+  console.log(overlayOffset);
+  if (overlayOffset < (windowHeight / 2)) {
+    overlayOpacity = 0;
+  }
+  else {
+    overlayOpacity = Math.floor(overlayOffset / 10);
+  }
+  vidOverlay.css("opacity", overlayOpacity);
+  // Tagline Video Start
+  var hT = vid.offset().top,
+      hH = vid.outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+      if (wS > (hT+hH-wH) && hasRun == false){
+        vid.get(0).currentTime = 0;
+        vid.trigger('play');
+        hasRun = true;
+      }
  });

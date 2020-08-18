@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row body-text border-bottom">
+            <div class="row body-text border-bottom row-even">
                 <div class="col">
                     <div class="section-content justify-content-center">
                         <video class="tagline-video" id="tagline" muted loop poster="/img/hero/tagline_poster.jpg">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row body-text border-bottom">
+            <div class="row body-text border-bottom row-odd">
                 <div class="col-lg-3 border-right">
                     <div class="section-content">
                         <div class="section-image">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row body-text border-bottom">
+            <div class="row body-text border-bottom row-even">
                 <div class="col-lg-9 border-right">
                     <div class="row video-row">
                         <div class="col-lg-6">
@@ -94,8 +94,47 @@
                     </div>         
                 </div>
             </div>
+            <div class="row body-text border-bottom row-odd">
+                <div class="col-lg-3 border-right">
+                    <div class="section-image">
+                        <img class="img-fluid" src="img/stills/synth_still_2.png" />
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="col margin-100">
+                        <div class="body-text">
+                            <h2 class="h2">Contact Us:</h2>
+                            <form id="contactForm" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSec6V0dOeuzu58oOrvbzhGz10QA9W34r5XlZvmH2tOfeg4VoQ/formResponse" method="POST">
+                                <div class="row cf-element">
+                                    <div class="col">
+                                        <input id="nameInput" type="text" class="form-control" placeholder="Full Name" name="entry.2113922827" required>
+                                    </div>
+                                    <div class="col">
+                                        <input id="emailInput" type="email" class="form-control" placeholder="Email" name="entry.166808836" required>
+                                    </div>
+                                </div>
+                                <div class="row cf-element">
+                                    <div class="col">
+                                        <textarea class="form-control" id="commentInput" placeholder="Questions/Comments" name="entry.1268011113" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="row cf-element">
+                                    <div class="col">
+                                        <button class="btn btn-outline-light" type="submit">Submit Form</button>
+                                        <div class="loading-icon" id="form-loading"></div>
+                                    </div>
+                                </div>
+                                <div class="row cf-element">
+                                    <div class="col" id="noticeArea"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>  
+    <div class="vid-overlay" id="vidOverlay"></div>
     <video class="hero-video" autoplay muted loop poster="/img/hero/hero_image.jpg">
         <source src="video/hero_video.webm" type="video/webm">
         <source src="video/hero_video.mp4" type="video/mp4">

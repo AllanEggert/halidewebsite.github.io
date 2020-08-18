@@ -74,6 +74,9 @@ text-decoration-color:#239a9a;
   display: flex;
   align-items: center;
 }
+.row-even {
+  background: #000;
+}
 /* Media Styles */
 .video-row {
   height: 100%;
@@ -100,10 +103,23 @@ text-decoration-color:#239a9a;
   max-width: 100%;
   max-height: 40vh;
 }
+.vid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("/img/hero/bg_overlay.png");
+  background-repeat: repeat;
+  z-index: -50;
+  opacity: 0;
+}
 /* Misc Styles */
 .navbar-toggler-icon {
 background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.cf-element {
-    padding: 10px;
+.cf-element > .col {
+  margin: 0px 15px 15px 0px;
 }
