@@ -1,4 +1,7 @@
 /* Core Styles */
+html {
+  scroll-behavior: smooth;
+}
 body {
     background: rgb(11,11,11);
     scrollbar-color: rgb(50,50,50) rgb(11,11,11);
