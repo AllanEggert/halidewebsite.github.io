@@ -1,68 +1,97 @@
-/* Setup main styles */
-html, body {
-  height: 100%;
-  overflow: auto;
-  font-family: Arial, Helvetica, sans-serif;
+/* Core Styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background: rgb(11,11,11);
+    scrollbar-color: rgb(50,50,50) rgb(11,11,11);
+    scrollbar-width: thin;
 }
 a {
-  color: #239a9a;
-  font-weight: normal;
-  text-decoration: none;
+color: #239a9a;
+font-weight: normal;
+text-decoration: none;
 }
 a:hover {
-  color: #239a9a;
-  font-weight: bolder;
-  text-decoration: underline;
+color: #239a9a;
+text-decoration: underline!important;
+text-decoration-color:#239a9a;
 }
-.text-kj {
-    font-family: 'Roboto Mono', monospace;
-    color: #f4f9f9;
+/* Bootstrap Overrides */
+.col {
+    padding: 0px;
 }
-.separator > hr {
-    border-top: 1px #f2f4f3 solid!important;
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
-.line-height-fix {
-    line-height: 50px;
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
-/* New Styling Code */
-.logo-box {
-  margin: 10px;
-  padding: 20px;
-  background-color: rgba(11, 11, 11, 0.95);
+/* scroll indicator style */
+.scroll-indicator {
+  margin-bottom: 5vh;
+}
+.svg {
+  height: 46px;
+  width: 17px;
+}
+.st0 {
+  fill: none;
+}
+.st1 {
+  fill: url(#grad2);
+}
+/* Section Styles */
+.navbar-style {
+  background: rgba(11,11,11,0.9);
+  position: fixed;
+  top: 0;
+  margin: 0;
+}
+.content-main {
+  position: absolute;
+  top: 95vh;
+}
+.logo-img {
+    display: block;
+    background: url('/img/logo.png');
+    background-size: cover;
+    width: 400px;
+    height: 100px;
+}
+.logo {
+  position: relative;
+  width: 100%;
 }
 .body-text {
-  background-color: rgba(11, 11, 11, 0.95);
-  color: #f4f9f9;
-  font-size: 17pt;
-  font-family: 'Roboto Mono', monospace;
-  margin: 10px;
-  padding: 20px;
+    background: rgb(11,11,11);
+    font-family: 'Roboto Mono', monospace;
+    color:#f4f9f9;
+    width: 100%;
+    padding: 50px;
 }
-.close {
-    color: #080708!important;
+.section-content {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 }
-.nav-link {
-  color: #f4f9f9;
-  font-size: 12pt;
+.row-even {
+  background: #000;
 }
-.nav-link:hover{
-  font-weight: normal;
-  color:#6f8695;
+/* Media Styles */
+.video-row {
+  height: 100%;
 }
-.home-tab {
-  margin-top: 15px;
+.yt-video {
+  width: 100%;
+  height: 100%;
 }
-.tab-text-body {
-  margin-top: 15px;
+.video {
+    width: 100%;
 }
-.text-mini {
-  font-size: 8pt;
-}
-.pm-list {
-  font-size: 14pt;
-}
-/* Background Stuff */
-#bg-vid {
+.hero-video {
   position: fixed;
   bottom: 0;
   top: 0;
@@ -73,6 +102,10 @@ a:hover {
   overflow: hidden;
   z-index: -100;
 }
+.tagline-video {
+  max-width: 100%;
+  max-height: 40vh;
+}
 .vid-overlay {
   position: fixed;
   top: 0;
@@ -81,26 +114,15 @@ a:hover {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  background-image: url("/img/bg_overlay.png");
+  background-image: url("/img/hero/bg_overlay.png");
   background-repeat: repeat;
   z-index: -50;
+  opacity: 0;
 }
-/* youtube embed stuff */
-.yt-frame {
-  margin-top: 15px;
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+/* Misc Styles */
+.navbar-toggler-icon {
+background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.yt-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* Contact form styles */
-.cf-element {
-  margin-top: 15px;
+.cf-element > .col {
+  margin: 0px 15px 15px 0px;
 }
