@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
   width: 100% auto;
+  overflow-x: hidden;
 }
 body {
     background: rgb(11,11,11);
@@ -36,6 +37,12 @@ text-decoration-color:#239a9a;
   position: relative;
   bottom: 10vh;
 }
+@media screen and (min-device-width: 375px) and (max-device-width: 740px) {
+  .scroll-indicator {
+    position: relative;
+    bottom: 20vh;
+  }
+}
 .svg {
   height: 46px;
   width: 17px;
@@ -57,13 +64,13 @@ text-decoration-color:#239a9a;
   position: absolute;
   top: 95vh;
 }
-@media (max-width: 575.98px) {
-  .logo-img {
-
-  }
-}
 .logo-container {
   max-width: 500px;
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 740px) {
+  .logo-container {
+    max-width: 50%;
+  }
 }
 .logo-img {
     display: block;
@@ -83,6 +90,12 @@ text-decoration-color:#239a9a;
   min-height: 100%;
   display: flex;
   align-items: center;
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 740px) {
+  .section-content {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 .row-even {
   background: #000;
