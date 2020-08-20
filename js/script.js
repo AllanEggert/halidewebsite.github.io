@@ -56,3 +56,9 @@ $(window).scroll(function() {
         hasRun = true;
       }
  });
+ $(document).ready(function(){
+  if($(window).width() < 740) {
+    $('.border-right').addClass('.border-bottom');
+    $('.border-right').removeClass('border-right');
+  }
+ });

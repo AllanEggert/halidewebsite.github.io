@@ -20,7 +20,9 @@
             <div class="col navbar-style">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="#">
-                        <span class="logo-img"></span>
+                        <div class="logo-container">
+                            <img class="logo-img img-fluid" src="img/logo.png" alt="Halide Digital" />
+                        </div>
                     </a>
                 </nav>
             </div>
@@ -36,7 +38,7 @@
             <div class="row body-text border-bottom row-even"  id="#contentMain">
                 <div class="col">
                     <div class="section-content justify-content-center">
-                        <video class="tagline-video" id="tagline" muted loop poster="/img/hero/tagline_poster.jpg">
+                        <video class="tagline-video" id="tagline" defaultMuted muted loop playsinline poster="/img/hero/tagline_poster.jpg">
                             <source src="video/tagline_video.webm" type="video/webm">
                             <source src="video/tagline_video.mp4" type="video/mp4">
                             <img src="/img/hero/tagline_poster.jpg" alt="your browser does not support HTML5 video." title="your browser does not support HTML5 video." />
@@ -125,7 +127,7 @@
         </div>
     </div>  
     <div class="vid-overlay" id="vidOverlay"></div>
-    <video class="hero-video" autoplay muted loop poster="/img/hero/hero_image.jpg">
+    <video class="hero-video" defaultMuted autoplay muted loop playsinline poster="/img/hero/hero_image.jpg">
         <source src="video/hero_video.webm" type="video/webm">
         <source src="video/hero_video.mp4" type="video/mp4">
         <img src="/img/hero/hero_image.jpg" alt="your browser does not support HTML5 video." title="your browser does not support HTML5 video." />
