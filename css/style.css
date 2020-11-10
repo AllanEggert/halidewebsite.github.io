@@ -63,6 +63,7 @@ text-decoration-color:#239a9a;
 .content-main {
   position: absolute;
   top: 95vh;
+  width: 100%;
 }
 @media only screen and (min-width:320px) and (max-width: 1170px) {
   .content-main {
