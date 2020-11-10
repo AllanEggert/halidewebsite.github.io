@@ -115,12 +115,17 @@ text-decoration-color:#239a9a;
   position: fixed;
   bottom: 0;
   top: 0;
-  left: -960;
+  left: 0;
   right: 0;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
   z-index: -100;
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 740px) {
+  .hero-video {
+    left: -50vw;  
+  }
 }
 .tagline-video {
   max-width: 100%;
