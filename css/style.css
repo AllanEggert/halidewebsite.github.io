@@ -141,7 +141,8 @@ text-decoration-color:#239a9a;
     display: block;
     position: fixed;
     top: 0;
-    left: -50vw;
+    /* left: -50vw; */
+    right: -100vw;
   }
 }
 .tagline-video {
