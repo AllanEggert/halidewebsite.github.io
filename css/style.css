@@ -137,6 +137,7 @@ text-decoration-color:#239a9a;
     display: none;
   }
   .hero-video-mobile {
+    overflow: hidden;
     display: block;
     position: fixed;
     top: 0;
