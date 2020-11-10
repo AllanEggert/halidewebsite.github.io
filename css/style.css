@@ -122,9 +122,19 @@ text-decoration-color:#239a9a;
   overflow: hidden;
   z-index: -100;
 }
-@media screen and (min-device-width: 375px) and (max-device-width: 740px) {
+.hero-video-mobile {
+  display: none;
+  z-index: -100;
+}
+@media only screen and (min-width:320px) and (max-width: 1170px) {
   .hero-video {
-    left: -50vw;  
+    display: none;
+  }
+  .hero-video-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -25vw;
   }
 }
 .tagline-video {
