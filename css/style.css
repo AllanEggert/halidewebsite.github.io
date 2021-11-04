@@ -91,6 +91,10 @@ text-decoration-color:#1B6D88;
 }
 .client-logo {
   max-height: 200px;
+  margin-top: 2vh;
+}
+.d2d {
+  max-width: 100%;
 }
 .client-name {
   height: 100%;
