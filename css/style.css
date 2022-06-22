@@ -96,6 +96,9 @@ text-decoration-color:#1B6D88;
 .d2d {
   max-width: 100%;
 }
+.fivex {
+  max-width: 15vw;
+}
 .client-name {
   height: 100%;
   width: 100%;
@@ -186,4 +189,8 @@ text-decoration-color:#1B6D88;
     transform: scale(0.85);
   }
 }
-
+/* CreativeBC Logo */
+.creativebc-logo {
+  max-width: 500px;
+  margin-top: 50px;
+}
